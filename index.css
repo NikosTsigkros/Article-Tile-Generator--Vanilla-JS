@@ -1,7 +1,79 @@
 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
     text-align: center;
     background-color: #f4f4f1;
     padding: 10px;
     border-bottom: 2px solid grey;
-    color: grey;
+    color: rgb(116, 117, 116);
+}
+
+#content {
+    position: absolute;
+    top: 2vh;
+    bottom: 5vh;
+    overflow: auto;
+    margin-top: 3.2rem !important;
+    margin-bottom: 3.2rem !important;
+    margin-bottom: 20px;
+    background-color: red;
+}
+
+#view {
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    top: 87vh;
+    background-color: #f4f4f4;
+    border-top: 2px solid grey;
+    padding: 20px;
+}
+
+.container {
+    max-width: 60vw;
+}
+
+#view {
+    overflow: auto;
+}
+
+.article {
+    border: 2px solid #333;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.res {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.card-body > .btn {
+ display: inline-block !important;
+}
+
+.div-img {
+    border-radius: 5px;
+    display: flex;
+    align-self: center;
+    align-content: center;
+    margin: auto;
 }
