@@ -3,7 +3,7 @@ nav {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0;
+    top: 0vh;
     left: 0;
     height: 10vh;
     width: 100%;
@@ -16,13 +16,14 @@ nav {
 
 #content {
     position: absolute;
-    top: 2vh;
+    top: 5vh;
     bottom: 5vh;
     overflow: auto;
     margin-top: 3.2rem !important;
     margin-bottom: 3.2rem !important;
     margin-bottom: 20px;
-    background-color: red;
+    /*background-color: red;*/
+    width: 100%;
 }
 
 #view {
