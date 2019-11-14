@@ -35,13 +35,28 @@ nav {
 footer {
     position: absolute;
     top: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f4f4f4;
     border-top: 2px solid grey;
     padding: 20px;
 }
 
-.container {
-    max-width: 60vw;
+@media (max-width: 500px) {
+    footer {
+        top: 60vh;
+    }
+
+    #content {
+        bottom: 30vh;
+    }
+}
+
+@media(min-width: 500px) {
+    .container {
+        max-width: 60vw;
+    }
 }
 
 #view {

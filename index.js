@@ -1,6 +1,8 @@
 let IDgenerateMoreImages = 0;
 //get View
 const UIview = document.querySelector('#view');
+//setNoArticlesMessage
+setNoArticlesMessage();
 //get Form
 const UIform = document.querySelector('form');
 //form submission + add article (btn)
@@ -13,18 +15,23 @@ let numArticles = 0;
 const UInumArticles = document.querySelector('#numArticles');
 UInumArticles.appendChild(document.createTextNode(numArticles));
 
-function postArticle (e) {
+function postArticle(e) {
     e.preventDefault();
+
+    //remove No Articles message when you enter the 1st one
+    if (numArticles === 0) {
+        UIview.innerHTML = '';
+    }
 
     // Create Elements and Add Classes
     const divCard = document.createElement('div');
     divCard.className = 'card my-3';
     const divRow = document.createElement('div');
-    divRow.className = 'row' ;
+    divRow.className = 'row';
     const divImg = document.createElement('div');
-    divImg.className = 'div-img col-4';
+    divImg.className = 'div-img col-lg-4';
     const divCardBody = document.createElement('div');
-    divCardBody.className = "card-body col-8";
+    divCardBody.className = "card-body col-lg-8";
     const img = document.createElement('img');
     img.className = "card-img-top";
     const h4 = document.createElement('h4');
@@ -61,15 +68,31 @@ function postArticle (e) {
     console.log(divCard);
     console.log(img.getAttribute('src'));
 
-    //increase articles number
+    //increase articles number ??????????????
     numArticles = numArticles + 1;
     UInumArticles.appendChild(document.createTextNode(numArticles));
+
+    //delete values ??????????????????????
+    document.querySelector('#inputTitle').innerHTML = '';
+    document.querySelector('#inputContent').innerHTML = '';
+    document.querySelector('#inputSubject').innerHTML = '';
 }
 
-function deleteArticles (e) {
+function deleteArticles(e) {
     e.preventDefault();
     if (confirm('Are you sure you want to DELETE everying?')) {
+
+        //delete all articles
         console.log('deleted everything');
-        UIview.innerHTML = '';
+        setNoArticlesMessage();
+
+        //reset article num
+        numArticles = 0;
+        UInumArticles.appendChild(document.createTextNode(numArticles));
     }
+
+}
+
+function setNoArticlesMessage() {
+    UIview.innerHTML = '<h2>You ave no Articles</h2>';
 }
