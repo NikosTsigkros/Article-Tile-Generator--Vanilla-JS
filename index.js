@@ -94,5 +94,5 @@ function deleteArticles(e) {
 }
 
 function setNoArticlesMessage() {
-    UIview.innerHTML = '<h2>You ave no Articles</h2>';
+    UIview.innerHTML = '<h2>You have no Articles</h2>';
 }
