@@ -88,6 +88,7 @@ function deleteArticles(e) {
 
         //reset article num
         numArticles = 0;
+        IDgenerateMoreImages = 0;
         UInumArticles.appendChild(document.createTextNode(numArticles));
     }
 
