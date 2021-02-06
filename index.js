@@ -2,7 +2,7 @@ let artObj = {
     art: []
 };
 let json;
-var fs = require('fs');
+// var fs = require('fs');
 let IDgenerateMoreImages = 0;
 //get View
 const UIview = document.querySelector('#view');
@@ -63,7 +63,7 @@ function postArticle(e) {
     console.log('art', artObj.art);
     json = JSON.stringify(artObj);
     console.log('json', json);
-    fs.writeFile('art.json', json, 'utf8', callback);
+    // fs.writeFile('art.json', json, 'utf8', callback);
 
     //increase articles number ??????????????
     numArticles = numArticles + 1;
