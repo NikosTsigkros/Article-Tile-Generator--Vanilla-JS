@@ -43,6 +43,26 @@ footer {
     padding: 20px;
 }
 
+@media (min-width: 992px) {
+    #btnSubmit,
+    #btnDeleteAll {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1590px) {
+    .div-img {
+        padding: 20px;
+        padding-left: 40px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 992px) {
+    footer {
+        top: 60vh;
+    }
+}
+
 @media (max-width: 500px) {
     footer {
         top: 60vh;
@@ -53,7 +73,7 @@ footer {
     }
 }
 
-@media(min-width: 500px) {
+@media (min-width: 500px) {
     .container {
         max-width: 60vw;
     }
@@ -83,7 +103,7 @@ footer {
     align-content: center;
 }
 .card-body > .btn {
- display: inline-block !important;
+    display: inline-block !important;
 }
 
 .div-img {
@@ -92,4 +112,10 @@ footer {
     align-self: center;
     align-content: center;
     margin: auto;
+}
+
+.col-lg-2,
+.col-lg-3 {
+    display: flex;
+    align-items: center;
 }

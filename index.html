@@ -1,112 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Blog in JS</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog in JS</title>
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        />
+        <!-- Bootstrap core CSS -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Material Design Bootstrap -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./index.css" />
+    </head>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css">
-</head>
+    <body>
+        <div id="content text-center">
+            <nav>
+                <h1>Blog: <span id="numArticles"></span> Articles.</h1>
+            </nav>
+            <div id="content" class="py-3">
+                <div id="view" class="container">
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="row">
+                            <div class="div-img col-lg-4">
+                                <img
+                                    class="card-img-top"
+                                    src="https://source.unsplash.com/random/600x450"
+                                    alt="Card image cap"
+                                />
+                            </div>
+                            <div class="card-body col-lg-8">
+                                <h4 class="card-title"><a>Card title</a></h4>
 
-<body>
-    <div id="content text-center">
-        <nav>
-            <h1>Blog: <span id="numArticles"></span> Articles.</h1>
-        </nav>
-        <div id="content" class="py-3">
+                                <p class="card-text">
+                                    Some quick example text to build on the card
+                                    title and make up the bulk of the card's
+                                    content.
+                                </p>
 
-            <div id="view" class="container">
-                <!-- Card -->
-                <div class="card">
-                    <div class="row">
-                        <div class="div-img col-lg-4">
-                            <img class="card-img-top" src="https://source.unsplash.com/random/600x450"
-                                alt="Card image cap">
-                        </div>
-                        <div class="card-body col-lg-8">
-
-                            <h4 class="card-title"><a>Card title</a></h4>
-
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-
-                            <a href="#" class="btn btn-primary">Button</a>
-
+                                <a href="#" class="btn btn-primary">Button</a>
+                            </div>
                         </div>
                     </div>
+                    <!-- Card -->
                 </div>
-                <!-- Card -->
-
             </div>
 
+            <footer class="page-footer fixed-bottom">
+                <div class="container-fluid">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="input-group mb-3 mb-lg-0">
+                                    <div class="input-group-prepend">
+                                        <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-default"
+                                            >Title</span
+                                        >
+                                    </div>
+                                    <input
+                                        id="inputTitle"
+                                        type="text"
+                                        class="form-control"
+                                        aria-label="Sizing example input"
+                                        aria-describedby="inputGroup-sizing-default"
+                                        value="Article Title"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="input-group mb-3 mb-lg-0">
+                                    <div class="input-group-prepend">
+                                        <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-default"
+                                            >Content</span
+                                        >
+                                    </div>
+                                    <input
+                                        id="inputContent"
+                                        type="text"
+                                        class="form-control"
+                                        aria-label="Sizing example input"
+                                        aria-describedby="inputGroup-sizing-default"
+                                        value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iusto, ipsa hic voluptatum veritatis accusantium accusamus eum quos est modi doloremque iste sequi, at totam unde quidem facilis omnis odio."
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="input-group mb-3 mb-lg-0">
+                                    <div class="input-group-prepend">
+                                        <span
+                                            class="input-group-text"
+                                            id="inputGroup-sizing-default"
+                                            >Subject</span
+                                        >
+                                    </div>
+                                    <input
+                                        id="inputSubject"
+                                        type="text"
+                                        class="form-control"
+                                        aria-label="Sizing example input"
+                                        aria-describedby="inputGroup-sizing-default"
+                                        value="forest"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-lg-2 flex res">
+                                <button
+                                    id="btnSubmit"
+                                    class="btn btn-primary w-100"
+                                >
+                                    Add Article
+                                </button>
+                            </div>
+                            <div class="col-lg-2 flex res">
+                                <button
+                                    id="btnDeleteAll"
+                                    class="btn btn-danger w-100"
+                                >
+                                    Delete All
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </footer>
         </div>
+        <!-- JQuery -->
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        ></script>
+        <!-- Bootstrap tooltips -->
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+        ></script>
+        <!-- Bootstrap core JavaScript -->
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+        ></script>
+        <!-- MDB core JavaScript -->
+        <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"
+        ></script>
 
-        <footer class="page-footer fixed-bottom">
-            <div class="container-fluid">
-                <form action="">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
-                                </div>
-                                <input id="inputTitle" type="text" class="form-control"
-                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default">Content</span>
-                                </div>
-                                <input id="inputContent" type="text" class="form-control"
-                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                                    required>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default">Subject</span>
-                                </div>
-                                <input id="inputSubject" type="text" class="form-control"
-                                    aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                            </div>
-                        </div>
-                        <div class="col-lg-2 flex res mb-2">
-                            <button class="btn btn-primary">Add Article</button>
-                        </div>
-                        <div class="col-lg-2 flex res">
-                            <button id="btnDeleteAll" class="btn btn-danger">Delete All</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </footer>
-
-    </div>
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
-
-    <script type="text/javascript" src="./index.js"></script>
-</body>
-
+        <script type="text/javascript" src="./index.js"></script>
+    </body>
 </html>
