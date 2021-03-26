@@ -6,7 +6,11 @@ A blog that the user can generate article tiles using Unsplash API in order to i
 
 ### <u>Technologies:</u>
 
-Made using HTML, CSS and mainly Vanilla JS. Also used <a href="https://source.unsplash.com/" target="_blank">Unsplash Random API</a> for generating images.
+-   HTML
+-   Custom CSS
+-   Vanilla JS
+-   <a href="https://getbootstrap.com/docs/4.3/getting-started/download/" target="_blank">Bootstrap 4.3.1</a>
+-   <a href="https://source.unsplash.com/" target="_blank">Unsplash Random API</a> for generating images.
 
 ### <u>Try it:</u>
 
