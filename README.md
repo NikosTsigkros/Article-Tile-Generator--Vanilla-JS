@@ -14,7 +14,7 @@ A blog that the user can generate article tiles using Unsplash API in order to i
 
 ### <u>Try it:</u>
 
-Click <a href="https://nikostsigkros.github.io/Articles-Blog--Vanilla-JS/" target="_blank">here</a> to see a live demo.
+Click <a href="https://nikostsigkros.github.io/Article-Tile-Generator--Vanilla-JS/" target="_blank">here</a> to see a live demo.
 
 #
 
